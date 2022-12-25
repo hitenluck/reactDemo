@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import MainScreen from './Screen/MainScreen';
+import Button from './components/Button';
+import MainScreen from './Screen';
 
 function App() {
   return (
     <div className="App">
-     <MainScreen />
+        <MainScreen />
     </div>
   );
 }
