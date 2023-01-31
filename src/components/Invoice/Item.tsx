@@ -2,7 +2,8 @@ import { Box, textAlign } from "@mui/system"
 import { Divider, Grid, Paper } from '@mui/material';
 import InvoiceText from "./InvoiceText";
 
-const Item = () => {
+const Item = ({part}: any) => {
+  console.log('hey part',part)
     return(
         <Box>
         <Grid container spacing={2} paddingBottom={2}>
@@ -13,7 +14,7 @@ const Item = () => {
           <InvoiceText text='Item #' />
           </Grid>
           <Grid item xs={3}>
-          <InvoiceText text='Description' />
+          <InvoiceText text={part.description} />
           </Grid>
           <Grid item xs={2}>
           <InvoiceText text='QTY' />

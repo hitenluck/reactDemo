@@ -24,21 +24,27 @@ const mockData = {
       parts: [{
         item: 'ITEM#',
         line: 'LINE',
-        description: 'DESCRIPTION',
+        description: 'this is chocolate',
         qty: 'QTY',
-        code: 'CODE'
+        price: 'CODE'
       },
       {
         item: 'ITEM#',
         line: 'LINE',
         description: 'DESCRIPTION',
         qty: 'QTY',
-        code: 'CODE'
+        price: 'CODE'
+      },
+      {
+        item: 'ITEM#',
+        line: 'LINE',
+        description: 'DESCRIPTION',
+        qty: 'QTY',
+        price: 'CODE'
       }]
-    }
-  ]
- 
-  
+    },
+  ],
+   
 }
 
 export default function ResponsiveDialog() {
@@ -76,10 +82,10 @@ export default function ResponsiveDialog() {
           </AddressContainer>
           {renderInvoiceAndPO(item)}
           {
-            item.parts.map(() => {
+            item.parts.map((part) => {
               return(
                 <>
-                <Item />
+                <Item part={part} />
                 <Divider />
                 </>
               )
