@@ -1,3 +1,4 @@
+
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Provider } from 'react-redux';
@@ -7,6 +8,11 @@ import ResponsiveDialog from './components/ResponsiveDialog';
 import Home from './containers/Home';
 import store from './redux/store';
 import MainScreen from './Screen';
+import {
+  RouterProvider,
+} from 'react-router-dom'
+import AboutUs from './containers/AboutUs';
+import { router } from './router/route';
 
 function App() {
   const [response, setResponse] = useState()
@@ -32,7 +38,7 @@ console.log('hey state data',response)
   return (
     <div className="App">
       <Provider store={store} >
-        {/* <ResponsiveDialog /> */}
+      <RouterProvider router={router} />
       </Provider>
     </div>
   );
